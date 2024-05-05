@@ -89,11 +89,10 @@ export default class Enrich
                   break;
 
                case JournalEntry.documentName:
-                  const imageSrc = document?.flags['monks-enhanced-journal']?.img ?? FVTTCompat.journalImage(document);
                   data = {
                      uuid,
                      name: document.name,
-                     img: imageSrc,
+                     img: FVTTCompat.journalImage(document),
                      hasTokenImg: false
                   };
                   break;
